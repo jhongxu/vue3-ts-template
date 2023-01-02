@@ -11,7 +11,7 @@ const service = axios.create({
 
 service.interceptors.request.use(
   (config) => {
-    // config.isToken
+    config.isToken
     return config
   },
   (error) => {

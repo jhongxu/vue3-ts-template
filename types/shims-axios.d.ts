@@ -6,10 +6,10 @@
  * @description: 请输入文件描述信息
  */
 
-import { AxiosHeaders } from 'axios'
+import { AxiosRequestConfig } from 'axios'
 
 declare module 'axios' {
-  export interface AxiosHeaders {
+  export interface AxiosRequestConfig {
     isToken?: boolean
     repeatSubmit?: boolean
     Authorization?: string
