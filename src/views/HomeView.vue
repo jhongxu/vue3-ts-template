@@ -1,5 +1,5 @@
 <template>
-  <div class="HomeView h-full p-4">
+  <div class="HomeView h-full p-4 w-full">
     <el-divider>路由跳转</el-divider>
     <router-link to="login">
       <el-button>LoginView</el-button>
@@ -10,6 +10,6 @@
   </div>
 </template>
 
-<script setup name="HomeView"></script>
+<script setup name="HomeView" lang="ts"></script>
 
 <style scoped></style>

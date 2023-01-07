@@ -1,13 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vue3-vite-ts-tpl</title>
+  <style>
+    /*html,*/
+    /*body {*/
+    /*    height: 100%;*/
+    /*    overflow: hidden;*/
+    /*}*/
+
+    /** {*/
+    /*    margin: 0;*/
+    /*    padding: 0;*/
+    /*}*/
+
+    /*body {*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*}*/
+    :root{
+      --loading-time:3s
+    }
+    .loading-box {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%) scale(0.8);
+      width: 200px;
+      height: 200px;
+    }
+
+    .loading-box > div {
+      position: absolute;
+    }
+
+    .loading-line-1,
+    .loading-line-2 {
+      z-index: 10;
+      width: 200px;
+      height: 2px;
+      background-color: black;
+    }
+
+    .loading-line-1 {
+      top: 20px;
+    }
+
+    .loading-line-2 {
+      top: 180px;
+    }
+
+    .loading-line-4,
+    .loading-line-5 {
+      z-index: 10;
+      width: 2px;
+      height: 200px;
+      background-color: black;
+    }
+
+    .loading-line-4 {
+      left: 20px;
+    }
+
+    .loading-line-5 {
+      left: 180px;
+    }
+
+    .loading-line-7 {
+      z-index: 1;
+      background-color: blue;
+      top: 20px;
+      left: 20px;
+      width: 30px;
+      height: 30px;
+      animation: blue 3s infinite;
+    }
+
+    .loading-line-7::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 200px;
+      height: 2px;
+      background-color: black;
+      left: -20px;
+      top: 100%;
+    }
+
+    .loading-line-8 {
+      z-index: 1;
+      background-color: red;
+      bottom: 20px;
+      right: 20px;
+      width: 130px;
+      height: 130px;
+      animation: red 3s infinite;
+    }
+
+    .loading-line-8::before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 130px;
+      height: 2px;
+      right: 0;
+      background-color: black;
+    }
+
+    .loading-line-8::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 2px;
+      height: 200px;
+      background-color: black;
+      bottom: -20px;
+      right: 100%;
+    }
+
+    @keyframes blue {
+      0%,
+      100% {
+        width: 30px;
+        height: 30px;
+      }
+      25% {
+        width: 130px;
+        height: 30px;
+      }
+      50% {
+        width: 130px;
+        height: 130px;
+      }
+      75% {
+        height: 130px;
+        width: 30px;
+      }
+    }
+
+    @keyframes red {
+      0%,
+      100% {
+        width: 130px;
+        height: 130px;
+      }
+      25% {
+        width: 30px;
+        height: 130px;
+      }
+      50% {
+        width: 30px;
+        height: 30px;
+      }
+      75% {
+        width: 130px;
+        height: 30px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="loading-box">
+    <div class="loading-line-1"></div>
+    <div class="loading-line-2"></div>
+    <div class="loading-line-4"></div>
+    <div class="loading-line-5"></div>
+    <div class="loading-line-7"></div>
+    <div class="loading-line-8"></div>
+  </div>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
 </html>

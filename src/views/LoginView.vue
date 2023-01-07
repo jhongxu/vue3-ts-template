@@ -93,7 +93,7 @@ logger.println({ obj })
 
 <style scoped lang="scss">
 .login-view {
-  @apply w-full h-full  bg-blue-200 flex justify-center items-center;
+  @apply w-full h-full   flex justify-center items-center;
 }
 
 .login-title {
