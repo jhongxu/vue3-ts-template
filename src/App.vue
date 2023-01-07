@@ -11,7 +11,7 @@
 import backgroundVideo from '@/assets/videos/background.mp4'
 </script>
 <style scoped lang="scss">
-.background{
+.background {
   position: relative;
 }
 </style>
